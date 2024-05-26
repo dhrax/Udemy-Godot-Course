@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=3 uid="uid://q04qbnc6ityn"]
+
+[ext_resource type="Texture2D" uid="uid://bo14cq6qknf3x" path="res://assets/sprites/background.png" id="1_ipfpt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oxjax"]
+size = Vector2(1, 1)
+
+[node name="Borders" type="Node"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = -1
+offset_right = 288.0
+offset_bottom = 512.0
+texture = ExtResource("1_ipfpt")
+
+[node name="Left Border" type="StaticBody2D" parent="."]
+
+[node name="Col left border" type="CollisionShape2D" parent="Left Border"]
+position = Vector2(-2, 256)
+scale = Vector2(4, 512)
+shape = SubResource("RectangleShape2D_oxjax")
+
+[node name="Right Border" type="StaticBody2D" parent="."]
+
+[node name="Col right border" type="CollisionShape2D" parent="Right Border"]
+position = Vector2(290, 256)
+scale = Vector2(4, 512)
+shape = SubResource("RectangleShape2D_oxjax")
+
+[node name="Top Border" type="StaticBody2D" parent="."]
+
+[node name="Col top border" type="CollisionShape2D" parent="Top Border"]
+position = Vector2(144, -2)
+rotation = -1.5708
+scale = Vector2(4, 288)
+shape = SubResource("RectangleShape2D_oxjax")
+
+[node name="Bot Border" type="StaticBody2D" parent="."]
+position = Vector2(0, 525)
+
+[node name="Col bot border" type="CollisionShape2D" parent="Bot Border"]
+position = Vector2(144, -2)
+rotation = -1.5708
+scale = Vector2(4, 288)
+shape = SubResource("RectangleShape2D_oxjax")

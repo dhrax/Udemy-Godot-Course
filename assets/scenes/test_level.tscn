@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://rjtxixvumb2d"]
+
+[ext_resource type="PackedScene" uid="uid://c0ad7mc5et7wt" path="res://assets/scenes/player.tscn" id="1_meida"]
+[ext_resource type="PackedScene" uid="uid://d2r8bhhrh6tgv" path="res://assets/scenes/ball.tscn" id="2_a75to"]
+[ext_resource type="PackedScene" uid="uid://q04qbnc6ityn" path="res://assets/scenes/borders.tscn" id="4_lomyh"]
+
+[node name="Test Level" type="Node2D"]
+
+[node name="Ball" parent="." instance=ExtResource("2_a75to")]
+position = Vector2(127, 256)
+
+[node name="Player" parent="." instance=ExtResource("1_meida")]
+position = Vector2(127, 458)
+
+[node name="Borders" parent="." instance=ExtResource("4_lomyh")]

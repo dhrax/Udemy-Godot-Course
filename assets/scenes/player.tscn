@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://c0ad7mc5et7wt"]
+
+[ext_resource type="Texture2D" uid="uid://ba41gjchhbbfk" path="res://assets/sprites/nave-g.png" id="1_e15c1"]
+[ext_resource type="Script" path="res://assets/scripts/player.gd" id="1_ptcdf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ewsor"]
+size = Vector2(64, 20)
+
+[node name="Player" type="CharacterBody2D"]
+position = Vector2(127, 304)
+disable_mode = 1
+motion_mode = 1
+script = ExtResource("1_ptcdf")
+metadata/_edit_group_ = true
+
+[node name="Spr_player" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_e15c1")
+
+[node name="col_player" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ewsor")
